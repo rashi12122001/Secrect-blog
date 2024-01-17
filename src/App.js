@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-
+import "bootstrap/dist/css/bootstrap.css"
+import Menu from './components/navbar/Menu';
+// import { BrowserRouter, Routes, Route,Router } from 'react-router-dom'
+import {Switch} from 'react-router-dom'
+import Login from './components/Auth/Login';
+// import Register from './components/Auth/Register';
+// import ForgotPassword from './components/Auth/ForgotPassword.jsx';
+// import SecretsList from './components/Secrets/SecrectList';
+// import PostSecret from './components/Secrets/PostSecret';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <div className='App'>
+<Login/>
+ </div>
   );
 }
-
 export default App;
+
