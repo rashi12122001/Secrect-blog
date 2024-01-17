@@ -47,6 +47,11 @@ const Text = styled(Typography)`
 `;
 //js
 function Login() {
+    
+const loginInitialValues = {
+    username: '',
+    password: ''
+};
         const signupInitialValues = {
           name: '',
           username: '',
