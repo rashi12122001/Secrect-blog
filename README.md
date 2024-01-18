@@ -1,6 +1,7 @@
 # about the project:-
 
-this proejct is made using the mern stack technology and uses google authenticator packages with bootstrap and MUI react styling
+this project is still under making.<br>
+Build using the mern stack technology and uses google authenticator with bootstrap and MUI react styling
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
