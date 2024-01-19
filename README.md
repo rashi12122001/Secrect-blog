@@ -6,6 +6,8 @@ Build using the mern stack technology and uses google authenticator with bootstr
 # backend intigrated
 
 ![image](https://github.com/rashi12122001/Secrect-blog/assets/74211043/a0ff99ed-0940-44e3-8bf4-95081961efb6)
+![image](https://github.com/rashi12122001/Secrect-blog/assets/74211043/c987c5d5-0f97-4df9-b657-538816c6e464)
+
 
 # Getting Started with Create React App
 
