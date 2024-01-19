@@ -6,3 +6,9 @@
   padding: 50px 0px 0px;
 
 }
+Page{
+  background-color: pink;
+}
+.css-qcmwy3-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: #115737 !important ;
+}
