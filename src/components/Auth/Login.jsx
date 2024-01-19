@@ -48,36 +48,20 @@ const Text = styled(Typography)`
     color: #878787;
     font-size: 12px;
 `;
-const Error = styled(Typography)`
-    font-size: 10px;
-    color: #ff6161;
-    line-height: 0;
-    margin-top: 10px;
-    font-weight: 600;
-`;
-const loginInitialValues = {
-  username: '',
-  password: ''
-};
-
-const signupInitialValues = {
-  name: '',
-  username: '',
-  password: '',
-};
 //js
-const Login = ({ isUserAuthenticated }) => {
-  const [login, setLogin] = useState(loginInitialValues);
-  const [signup, setSignup] = useState(signupInitialValues);
-  const [error, showError] = useState('');
-  const [account, toggleAccount] = useState('login');
-
-  const navigate = useNavigate(); //done
-  const { setAccount } = useContext(DataContext);
-
-  useEffect(() => {
-      showError(false);
-  }, [login])
+function Login() {
+    
+const loginInitialValues = {
+    username: '',
+    password: ''
+};
+        const signupInitialValues = {
+          name: '',
+          username: '',
+          password: '',
+        };
+        const [login, setLogin] = useState(loginInitialValues);
+        const [signup, setSignup] = useState(signupInitialValues);
 
   const onValueChange = (e) => {
       setLogin({ ...login, [e.target.name]: e.target.value });
