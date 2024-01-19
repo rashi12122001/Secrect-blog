@@ -2,6 +2,11 @@
 
 this project is still under making.<br>
 Build using the mern stack technology and uses google authenticator with bootstrap and MUI react styling
+
+# backend intigrated
+
+![image](https://github.com/rashi12122001/Secrect-blog/assets/74211043/a0ff99ed-0940-44e3-8bf4-95081961efb6)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
