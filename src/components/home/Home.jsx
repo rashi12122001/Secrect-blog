@@ -1,7 +1,9 @@
 import React from 'react'
+const Home = () => {
 
-export default function Home() {
   return (
-    <div>mai Home hu</div>
+<div>homeeee</div>
   )
 }
+
+export default Home

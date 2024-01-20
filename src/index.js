@@ -1,12 +1,14 @@
-import React from "react"
-import ReactDOM from "react-dom"
-// Update the import path in your index.js or another entry point file
-import App from "./App";
+import React from "react";
+import ReactDOM from "react-dom";
 import { Auth0Provider } from '@auth0/auth0-react';
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import App from "./App";
 import reportWebVitals from './reportWebVitals';
+import { createRoot } from 'react-dom';
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+
+root.render(
   <Auth0Provider
     domain="dev-afb7namhi62igfw4.us.auth0.com"
     clientId="32lLsjRI6wsyEYUgeUQIURmT2n5e3KXm"
@@ -15,7 +17,7 @@ ReactDOM.render(
     }}
   >
     <App />
-  </Auth0Provider>,
-  document.getElementById("root")
+  </Auth0Provider>
 );
+
 reportWebVitals();

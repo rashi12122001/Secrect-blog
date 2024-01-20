@@ -8,6 +8,7 @@ import Header from './components/navbar/Menu';
 import Login from './components/Auth/Login.jsx';
 import Home from './components/home/Home.jsx';
 
+
 // eslint-disable-next-line no-undef
 const PrivateRoute = ({ element: Element, isAuthenticated, ...props }) => {
   const token = sessionStorage.getItem('accessToken');
@@ -31,8 +32,8 @@ function App() {
         <Box>
           <Routes>
             {/* eslint-disable-next-line no-undef */}
-          <Route path='/Auth' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
-          <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
+            <Route path='/Auth' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
+            <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
               <Route path='/' element={<Home />} />
             </Route>
           </Routes>

@@ -11,6 +11,7 @@ const Connection = async (username, password) => {
     console.log("Database connected successfully");
   } catch (error) {
     console.log("Error", error);
+    //
   }
 };
 
