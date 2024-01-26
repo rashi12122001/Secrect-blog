@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import { API_NOTIFICATION_MESSAGES, SERVICE_URLS } from '../constants/configure';
 import { getAccessToken, getRefreshToken, setAccessToken, getType } from '../utility/common-utils';
 
@@ -38,18 +37,17 @@ axiosInstance.interceptors.response.use(
 )
 const processResponse = (response) => {
     if (response?.status >= 200 && response?.status < 300) {
-        return { isSuccess: true, data: response.data }
+        return { isSuccess: true, data: response.data };
     } else {
         console.error("ERROR IN RESPONSE: ", response);
         return {
             isFailure: true,
             status: response?.status,
-            msg: response?.msg,
-            code: response?.code
-        }
+            msg: response?.data?.message || "Unknown error",
+            code: response?.status,
+        };
     }
-}
-
+};
 
 const ProcessError = async (error) => {
     if (error.response) {

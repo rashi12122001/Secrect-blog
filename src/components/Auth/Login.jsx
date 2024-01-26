@@ -6,7 +6,6 @@ import logo from '../LOGO.png';
 import './Login.css';
 import welcome from '../welcome.png';
 import { DataContext } from '../../context/DataProvider';
-import Home from '../home/Home.jsx';
 
 const Component = styled(Box)`
   width: 400px;
@@ -55,7 +54,7 @@ const Text = styled(Typography)`
   font-size: 12px;
 `;
 
-function Login() {
+const Login = ({ isUserAuthenticated }) => {
   const navigate = useNavigate(); //used
   const { setAccount } = useContext(DataContext);
 
@@ -90,24 +89,26 @@ function Login() {
   const loginUser = async () => {
     try {
       let response = await API.userLogin(login);
-
+  
       if (response.isSuccess) {
         showError('');
+  
         sessionStorage.setItem('accessToken', `Bearer ${response.data.accessToken}`);
         sessionStorage.setItem('refreshToken', `Bearer ${response.data.refreshToken}`);
         setAccount({ name: response.data.name, username: response.data.username });
-        // Define or import isUserAuthenticated
-        // isUserAuthenticated(true);
+  
+        isUserAuthenticated(true);
         setLogin(loginInitialValues);
         navigate('/');
       } else {
         showError('Something went wrong! Please try again later.');
       }
     } catch (error) {
-      console.error('Login error:', error);
-      showError('An unexpected error occurred. Please try again.');
+      console.error('Error during login:', error);
+      showError('An error occurred during login. Please try again later.');
     }
   };
+  
 
   const signupUser = async () => {
     try {
